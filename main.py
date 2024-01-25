@@ -39,35 +39,35 @@ def plot_phase_diagram(solution, label_x='Prey (x)', label_y='Predator (y)', tit
 # Pages definitions
 def show_overview():
     st.markdown('''
-        ## Introduction
-        Historically, the first formal description of the interaction between two populations in an ecosystem is the Lotka-Volterra model. This model is used to analyze population dynamics and concerns a predator-prey system, illustrating how the predator population feeds on the prey species and how the growth of one population affects the other.
-        ''')
+    ## Wstęp
+    Historycznie pierwszym formalnym opisem oddziaływania dwóch populacji w ekosystemie jest model Lotki–Volterra. Model ten jest używany do analizy dynamiki populacji. Dotyczy on układu drapieżnik–ofiara, ilustruje, jak populacja drapieżników żywi się gatunkiem ofiary, jak wzrost jednej populacji wpływa na drugą.
+    ''')
     st.image('./img/foxvshare.jpg')
     st.markdown('''
-        For example, it is possible to analyze the dynamic interactions between the populations of foxes and hares by using the Lotka-Volterra equation.
-        ### Equation
-        The Lotka-Volterra equation of the model is as followed:
-        ''')
+    Przykładowo można analizować dzięki równianiu Lotki–Volterra dynamiczne oddziaływania pomiędzy populacją lisów, a zajęcy.
+    ### Równanie
+    Równanie Lotka-Volterra ma postać:
+    ''')
     st.latex(r'\frac{dx}{dt} = \alpha x - \beta xy')
     st.latex(r'\frac{dy}{dt} = \delta xy - \gamma y')
     st.markdown(r'''
-        ##### Prey
-        - $ \frac{dx}{dt} $ - rate of prey population growth at time $ t $
-        - $ x $ - amount of prey population (number of prey)
-        - $ \alpha $ - growth coefficient of prey population in the absence of predators
-        - $ \beta $ - mortality coefficient of prey due to the number of predators
-
-        ##### Predator
-        - $ \frac{dy}{dt} $ - rate of predator population growth at time $ t $
-        - $ y $ - amount of predator population (number of predators)
-        - $ \delta $ - reproduction coefficient of predators
-        - $ \gamma $ - mortality coefficient of predators due to the lack of prey
-
-        ### Analysis
-        The graph depicts dynamic changes in the population of prey (e.g., hares) and predators (e.g., foxes) over time, illustrating interactions between two populations in an ecosystem. On the phase diagram, you can visualize the relationship between these two populations in phase space. Analyzing these two graphs simultaneously allows understanding cyclic patterns, population stability, and ecosystem dynamics.
-        ''')
+    ##### Ofiara (Prey)
+    - $ \frac{dx}{dt} $ - tępo wzrostu populacji ofiar czasie $ t $
+    - $ x $ - ilość populacji ofiary (liczba ofiar)
+    - $ \alpha $ - Współczynnik przyrostu liczby ofiar w wyniku braku drapieżników
+    - $ \beta $ - współczynnik umieralności ofiar ze względu na liczbę drapieżników
+     
+    
+    ##### Drapieżnik (Predator)
+    - $ \frac{dy}{dt} $ - tępo wzrostu populacji drapieżników w czasie $ t $
+    - $ y $ - ilość populacji drapieżników (liczba drapieżników)
+    - $ \delta $ - współczynnik reprodukcji drapieżników
+    - $ \gamma $ - współczynnik śmiertelności drapieżników w wyniku braku ofiar
+    
+    ### Analiza
+    Wykres przedstawia dynamiczne zmiany w populacji ofiar (na przykład zająców) i drapieżników (na przykład lisów) w czasie, ilustrując interakcje między dwoma populacjami w ekosystemie. Na wykresie fazowym, można zobaczyć wizualizację relacji między tymi dwoma populacjami w przestrzeni fazowej. Analiza tych dwóch wykresów jednocześnie pozwala zrozumieć cykliczne wzorce, stabilność populacji i dynamikę ekosystemu.
+    ''')
     st.image('./img/foxhare.gif')
-
 
 def show_graphs():
     st.header("Graphs")
@@ -145,7 +145,7 @@ if __name__ == "__main__":
     # # Site elements
 
     # Site title
-    st.title('The Predator-Prey Model of Lotka-Volterra')
+    st.title('Predator-Prey Model Lotka-Volterra')
 
     # Sidebar
     # Navigation buttons
